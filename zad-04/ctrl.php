@@ -7,18 +7,14 @@ require_once 'init.php';
 
 switch ($action) {
 	default : // 'calcView'
-	    // załaduj definicję kontrolera
-		include_once 'app/controllers/CalcCtrl.class.php';
 		// utwórz obiekt i uzyj
-		$ctrl = new CalcCtrl ();
-		$ctrl->generateView ();
+		$ctrl = new app\controllers\CalcCtrl();
+		$ctrl->generateView();
 	break;
 	case 'calcCompute' :
-		// załaduj definicję kontrolera
-		include_once 'app/controllers/CalcCtrl.class.php';
 		// utwórz obiekt i uzyj
-		$ctrl = new CalcCtrl ();
-		$ctrl->process ();
+		$ctrl = new app\controllers\CalcCtrl();
+		$ctrl->process();
 	break;
 	case 'action1' :
 		// zrób coś innego ...

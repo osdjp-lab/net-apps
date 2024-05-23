@@ -2,7 +2,9 @@
 // W skrypcie definicji kontrolera nie trzeba dołączać problematycznego skryptu config.php,
 // ponieważ będzie on użyty w miejscach, gdzie config.php zostanie już wywołany.
 
-require_once 'CalcForm.class.php';
+namespace app\controllers;
+
+use app\forms\CalcForm;
 
 /** Kontroler kalkulatora
  * @author Przemysław Kudłacik
@@ -10,7 +12,6 @@ require_once 'CalcForm.class.php';
  */
 class CalcCtrl {
 
-	private $msgs;   //wiadomości dla widoku
 	private $form;   //dane formularza (do obliczeń i dla widoku)
 	private $result; //inne dane dla widoku
 
@@ -19,7 +20,6 @@ class CalcCtrl {
 	 */
 	public function __construct(){
 		//stworzenie potrzebnych obiektów
-		$this->msgs = new Messages();
 		$this->form = new CalcForm();
 		$this->result = null;
 	}
@@ -28,9 +28,9 @@ class CalcCtrl {
 	 * Pobranie parametrów
 	 */
 	public function getParams(){
-		$this->form->x = isset($_REQUEST ['x']) ? $_REQUEST ['x'] : null;
-		$this->form->y = isset($_REQUEST ['y']) ? $_REQUEST ['y'] : null;
-		$this->form->z = isset($_REQUEST ['z']) ? $_REQUEST ['z'] : null;
+		$this->form->x = getFromRequest('x');
+		$this->form->y = getFromRequest('y');
+		$this->form->z = getFromRequest('z');
 	}
 	
 	/** 
@@ -46,32 +46,32 @@ class CalcCtrl {
 		
 		// sprawdzenie, czy potrzebne wartości zostały przekazane
 		if ($this->form->x == "") {
-			$this->msgs->addError('Nie podano kwoty');
+			getMessages()->addError('Nie podano kwoty');
 		}
 		if ($this->form->y == "") {
-			$this->msgs->addError('Nie podano oprocentowania');
+			getMessages()->addError('Nie podano oprocentowania');
 		}
 		if ($this->form->z == "") {
-			$this->msgs->addError('Nie podano liczby lat');
+			getMessages()->addError('Nie podano liczby lat');
 		}
 		
 		// nie ma sensu walidować dalej gdy brak parametrów
-		if (! $this->msgs->isError()) {
+		if (! getMessages()->isError()) {
 			
 			// sprawdzenie, czy $x i $y są liczbami całkowitymi
 			if (! is_numeric ( $this->form->x )) {
-				$this->msgs->addError('Podana kwota nie jest liczbą całkowitą');
+				getMessages()->addError('Podana kwota nie jest liczbą całkowitą');
 			}
 			
 			if (! is_numeric ( $this->form->y )) {
-				$this->msgs->addError('Podane oprocentowanie nie jest liczbą całkowitą');
+				getMessages()->addError('Podane oprocentowanie nie jest liczbą całkowitą');
 			}
 			if (! is_numeric ( $this->form->z )) {
-				$this->msgs->addError('Podana liczba lat nie jest liczbą całkowitą');
+				getMessages()->addError('Podana liczba lat nie jest liczbą całkowitą');
 			}
 		}
 		
-		return ! $this->msgs->isError();
+		return ! getMessages()->isError();
 	}
 	
 	/** 
@@ -87,12 +87,12 @@ class CalcCtrl {
 			$this->form->x = intval($this->form->x);
 			$this->form->y = intval($this->form->y);
 			$this->form->z = intval($this->form->z);
-			$this->msgs->addInfo('Parametry poprawne.');
+			getMessages()->addInfo('Parametry poprawne.');
 				
 			//wykonanie operacji
             $this->result = $this->form->x* (100 + $this->form->y) / 100 / ($this->form->z * 12);
 			
-			$this->msgs->addInfo('Wykonano obliczenia.');
+			getMessages()->addInfo('Wykonano obliczenia.');
 		}
 		
 		$this->generateView();
@@ -107,7 +107,7 @@ class CalcCtrl {
         getSmarty()->assign('page_title','Calc Home');
         getSmarty()->assign('page_description','A simple single purpose calculator.');
 
-		getSmarty()->assign('msgs',$this->msgs);
+		getSmarty()->assign('msgs',getMessages());
 		getSmarty()->assign('form',$this->form);
         getSmarty()->assign('res',$this->result);
 
