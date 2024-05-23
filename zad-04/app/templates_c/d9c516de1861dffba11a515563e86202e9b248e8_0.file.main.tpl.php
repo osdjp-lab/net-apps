@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.2, created on 2024-05-23 22:33:28
+/* Smarty version 4.3.2, created on 2024-05-23 23:06:01
   from '/home/oscar/Desktop/Informatyka/Inf_II_Stopnia/Semestr-2/net-app/laboratoria/zadania/zad-04/templates/main.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_664fa818e44cd7_03746327',
+  'unifunc' => 'content_664fafb96c3406_60402546',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_664fa818e44cd7_03746327 (Smarty_Internal_Template $_smarty_tpl) {
+function content_664fafb96c3406_60402546 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -67,7 +67,7 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 				<!-- Main -->
                     <div id="main">
                         <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1681783003664fa818e43385_44479741', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_231090469664fafb96c1dc0_61909181', 'content');
 ?>
 
                     </div>
@@ -114,12 +114,12 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1681783003664fa818
 </html>
 <?php }
 /* {block 'content'} */
-class Block_1681783003664fa818e43385_44479741 extends Smarty_Internal_Block
+class Block_231090469664fafb96c1dc0_61909181 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_1681783003664fa818e43385_44479741',
+    0 => 'Block_231090469664fafb96c1dc0_61909181',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

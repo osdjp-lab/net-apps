@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2024-05-23 22:15:31
-  from '/home/oscar/Desktop/Informatyka/Inf_II_Stopnia/Semestr-2/net-app/laboratoria/zadania/zad-04/app/CalcView.tpl' */
+/* Smarty version 4.3.2, created on 2024-05-23 23:05:53
+  from '/home/oscar/Desktop/Informatyka/Inf_II_Stopnia/Semestr-2/net-app/laboratoria/zadania/zad-04/app/calc/CalcView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_664fa3e3eda3c8_10749919',
+  'unifunc' => 'content_664fafb1bbe664_73438580',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '43d66304e41ba318b4c3b11249f6b90563974503' => 
+    '4d9373e708ac4a1932c2e23d1f299071c4941689' => 
     array (
-      0 => '/home/oscar/Desktop/Informatyka/Inf_II_Stopnia/Semestr-2/net-app/laboratoria/zadania/zad-04/app/CalcView.tpl',
-      1 => 1716495243,
+      0 => '/home/oscar/Desktop/Informatyka/Inf_II_Stopnia/Semestr-2/net-app/laboratoria/zadania/zad-04/app/calc/CalcView.tpl',
+      1 => 1716498309,
       2 => 'file',
     ),
   ),
@@ -20,33 +20,33 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_664fa3e3eda3c8_10749919 (Smarty_Internal_Template $_smarty_tpl) {
+function content_664fafb1bbe664_73438580 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_742778718664fa3e3ed8487_08063668', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_915123921664fafb1bbc831_75489812', 'content');
 ?>
 
-<?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "../templates/main.tpl");
+<?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "../../templates/main.tpl");
 }
 /* {block 'content'} */
-class Block_742778718664fa3e3ed8487_08063668 extends Smarty_Internal_Block
+class Block_915123921664fafb1bbc831_75489812 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_742778718664fa3e3ed8487_08063668',
+    0 => 'Block_915123921664fafb1bbc831_75489812',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 
-<form action="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_url;?>
-/app/calc.php" method="post" class="pure-form pure-form-stacked">
+<form action="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
+calcCompute" method="post" class="pure-form pure-form-stacked">
     <!--<legend>Kalkulator rat</legend>-->
 	<fieldset>
 	    <label for="id_x">Kwota: </label>

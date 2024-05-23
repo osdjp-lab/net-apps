@@ -1,8 +1,8 @@
-{extends file="../templates/main.tpl"}
+{extends file="../../templates/main.tpl"}
 
 {block name=content}
 
-<form action="{$conf->app_url}/app/calc.php" method="post" class="pure-form pure-form-stacked">
+<form action="{$conf->action_root}calcCompute" method="post" class="pure-form pure-form-stacked">
     <!--<legend>Kalkulator rat</legend>-->
 	<fieldset>
 	    <label for="id_x">Kwota: </label>

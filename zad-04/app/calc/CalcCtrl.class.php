@@ -4,7 +4,7 @@
 
 require_once $conf->root_path.'/lib/smarty/Smarty.class.php';
 require_once $conf->root_path.'/lib/Messages.class.php';
-require_once $conf->root_path.'/app/CalcForm.class.php';
+require_once $conf->root_path.'/app/calc/CalcForm.class.php';
 
 /** Kontroler kalkulatora
  * @author Przemysław Kudłacik
@@ -117,6 +117,6 @@ class CalcCtrl {
 		$smarty->assign('form',$this->form);
 		$smarty->assign('res',$this->result);
 		
-		$smarty->display($conf->root_path.'/app/CalcView.tpl');
+		$smarty->display($conf->root_path.'/app/calc/CalcView.tpl');
 	}
 }
