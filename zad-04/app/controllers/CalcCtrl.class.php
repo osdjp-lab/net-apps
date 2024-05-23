@@ -2,9 +2,7 @@
 // W skrypcie definicji kontrolera nie trzeba dołączać problematycznego skryptu config.php,
 // ponieważ będzie on użyty w miejscach, gdzie config.php zostanie już wywołany.
 
-require_once $conf->root_path.'/lib/smarty/Smarty.class.php';
-require_once $conf->root_path.'/lib/Messages.class.php';
-require_once $conf->root_path.'/app/calc/CalcForm.class.php';
+require_once 'CalcForm.class.php';
 
 /** Kontroler kalkulatora
  * @author Przemysław Kudłacik
@@ -105,18 +103,14 @@ class CalcCtrl {
 	 * Wygenerowanie widoku
 	 */
 	public function generateView(){
-		global $conf;
-		
-		$smarty = new Smarty();
-		$smarty->assign('conf',$conf);
-	    $smarty->assign('author','Oscar Szumiak');
-        $smarty->assign('page_title','Calc Home');
-        $smarty->assign('page_description','A simple single purpose calculator.');
+	    getSmarty()->assign('author','Oscar Szumiak');
+        getSmarty()->assign('page_title','Calc Home');
+        getSmarty()->assign('page_description','A simple single purpose calculator.');
 
-		$smarty->assign('msgs',$this->msgs);
-		$smarty->assign('form',$this->form);
-		$smarty->assign('res',$this->result);
-		
-		$smarty->display($conf->root_path.'/app/calc/CalcView.tpl');
+		getSmarty()->assign('msgs',$this->msgs);
+		getSmarty()->assign('form',$this->form);
+        getSmarty()->assign('res',$this->result);
+
+		getSmarty()->display('CalcView.tpl');
 	}
 }

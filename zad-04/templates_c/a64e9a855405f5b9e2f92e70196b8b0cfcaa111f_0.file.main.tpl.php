@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 4.3.2, created on 2024-05-23 23:06:01
-  from '/home/oscar/Desktop/Informatyka/Inf_II_Stopnia/Semestr-2/net-app/laboratoria/zadania/zad-04/templates/main.tpl' */
+/* Smarty version 4.3.2, created on 2024-05-24 00:55:23
+  from '/home/oscar/Desktop/Informatyka/Inf_II_Stopnia/Semestr-2/net-app/laboratoria/zadania/zad-04/app/views/templates/main.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_664fafb96c3406_60402546',
+  'unifunc' => 'content_664fc95b92d729_45821367',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'd9c516de1861dffba11a515563e86202e9b248e8' => 
+    'a64e9a855405f5b9e2f92e70196b8b0cfcaa111f' => 
     array (
-      0 => '/home/oscar/Desktop/Informatyka/Inf_II_Stopnia/Semestr-2/net-app/laboratoria/zadania/zad-04/templates/main.tpl',
+      0 => '/home/oscar/Desktop/Informatyka/Inf_II_Stopnia/Semestr-2/net-app/laboratoria/zadania/zad-04/app/views/templates/main.tpl',
       1 => 1716496406,
       2 => 'file',
     ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_664fafb96c3406_60402546 (Smarty_Internal_Template $_smarty_tpl) {
+function content_664fc95b92d729_45821367 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -67,7 +67,7 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 				<!-- Main -->
                     <div id="main">
                         <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_231090469664fafb96c1dc0_61909181', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_348366292664fc95b92c0b1_57574632', 'content');
 ?>
 
                     </div>
@@ -114,12 +114,12 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_231090469664fafb96
 </html>
 <?php }
 /* {block 'content'} */
-class Block_231090469664fafb96c1dc0_61909181 extends Smarty_Internal_Block
+class Block_348366292664fc95b92c0b1_57574632 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_231090469664fafb96c1dc0_61909181',
+    0 => 'Block_348366292664fc95b92c0b1_57574632',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2024-05-23 23:06:01
-  from '/home/oscar/Desktop/Informatyka/Inf_II_Stopnia/Semestr-2/net-app/laboratoria/zadania/zad-04/app/calc/CalcView.tpl' */
+/* Smarty version 4.3.2, created on 2024-05-24 00:55:23
+  from '/home/oscar/Desktop/Informatyka/Inf_II_Stopnia/Semestr-2/net-app/laboratoria/zadania/zad-04/app/views/CalcView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_664fafb96bcbc9_19197557',
+  'unifunc' => 'content_664fc95b9275a8_99032189',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'c18ec8502b8804a868e3e85090dd778a1e963fa9' => 
+    'e398a9205c0ca865bba9f9ce8a2c38a1de303541' => 
     array (
-      0 => '/home/oscar/Desktop/Informatyka/Inf_II_Stopnia/Semestr-2/net-app/laboratoria/zadania/zad-04/app/calc/CalcView.tpl',
-      1 => 1716498309,
+      0 => '/home/oscar/Desktop/Informatyka/Inf_II_Stopnia/Semestr-2/net-app/laboratoria/zadania/zad-04/app/views/CalcView.tpl',
+      1 => 1716500119,
       2 => 'file',
     ),
   ),
@@ -20,25 +20,25 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_664fafb96bcbc9_19197557 (Smarty_Internal_Template $_smarty_tpl) {
+function content_664fc95b9275a8_99032189 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1357984830664fafb96badb1_57599848', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_464869953664fc95b925885_62476891', 'content');
 ?>
 
-<?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "../../templates/main.tpl");
+<?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'content'} */
-class Block_1357984830664fafb96badb1_57599848 extends Smarty_Internal_Block
+class Block_464869953664fc95b925885_62476891 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_1357984830664fafb96badb1_57599848',
+    0 => 'Block_464869953664fc95b925885_62476891',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
